@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/nisha/Downloads/Portfolio%20ko.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>portport</title>
+    <link rel="stylesheet" href="./final portfolio_files/CSS.html">
+    <style>
+        html{
+        scroll-behavior: smooth;
+    }
+    
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+    }
+
+    body{
+    background:gray;
+    }
+
+    #Header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: orange;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        animation: slideBottom 2s ease forwards;
+        opacity: 0;
+    }
+
+    b{
+        color: white;
+        font-size: 40px;
+    }
+
+    .logo{
+        position: relative;
+        font-size: 25px;
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        transition: .5s;
+    }
+
+    .navbar a{
+        display: inline-block;
+        font-size: 25px;
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .5s;
+    }
+
+    .navbar a:hover{
+        color: white;
+        transform: translateY(-10px);
+    }
+
+    #Header a::first-letter{
+        color: white;
+   }
+
+    .logo:hover{
+        color:white;
+        transform: translateX(5px);
+    }
+
+    .article{
+        color: black;
+        padding-top: 20%;
+        padding-left: 50px;
+        z-index:0;
+        animation: slideTop 2s ease forwards;
+        opacity: 0;
+    }
+
+    h1{
+       font-size: 30px;
+       z-index: 0;
+    }
+
+    span{
+        color: white;
+        font-size: 40px;
+        font-style: italic;
+    }
+
+    h{
+        font-size: 35px;
+        color: white;
+    }
+
+    p{
+        font-size: 25px;
+    }
+
+    .me{
+        width: 40%;
+        height: 50%;
+        border: 2px solid orange;
+        border-radius: 50%;
+        margin-left: 55%;
+        margin-top: -19%;
+        z-index: 1;
+        transition: transform .5s;
+    }
+
+
+    .me:hover{
+        transform: scale(1.1);
+    }
+
+    .article a{ 
+        text-decoration: none;
+    }
+
+    .article a:hover{
+        color: black;
+        transition: .3s;
+        background-color: white;
+    }
+
+    .contac{
+        font-size: 20px;
+        color:orange;
+        word-spacing: 10px;
+        border: 2px solid orange;
+        padding: 10px;
+        position: absolute;
+        margin-top: 41px;
+        background-color: black;
+        margin-left: 17%;
+        border-radius: 15px;
+    }
+
+    .HAIRME{
+        position: absolute;
+        padding-left: 0%;
+        z-index: 1;
+        display: grid;
+    }
+
+    .HAIRME p{
+        border-radius: 15px;
+        border: 2px solid orange;
+        background-color:black;
+        color: orange;
+        display: inline-block;
+        width: 120%;
+        height: 80%;
+        padding: 5px;
+        margin-top: 20px;
+        text-align: center;
+        place-content: center;
+        font-size: 20px;
+        margin-left: 50%;
+        transition: all 0.6s ease-in-out;
+        cursor: pointer;
+    }
+
+    .menu{
+        position: relative;
+        width: 17%;
+        height:100%;
+    }
+
+    .items1{
+        position: absolute;
+        height: 20%;
+        width: 5%;
+        transition: all 1s;
+        transform: rotated(180deg);
+        opacity: 0;
+        margin-top: 35%;
+        margin-left: 20%;
+        font-size: 150%;
+    }
+
+    .HAIRME:hover+.menu>.items1{
+        top: 0;
+        transform: rotateZ(0deg);
+        visibility: visible;
+        opacity: 5;
+    }
+
+    .HAIRME p:hover{
+        color: black;
+        background-color: white;
+        transform: translateY(-5px);
+    }
+
+    .callme{
+        position: absolute;
+        padding-left: 10%;
+        display: grid;
+    }
+
+    .callme p{
+        border-radius: 15px;
+        border: 2px solid orange;
+        background-color:black;
+        color: orange;
+        display: inline-block;
+        width: 120%;
+        height: 80%;
+        padding: 5px;
+        margin-top: 20px;
+        text-align: center;
+        place-content: center;
+        font-size: 20px;
+        margin-left: 50%;
+        transition: all 0.6s ease-in-out;
+        cursor: pointer;
+    }
+
+    .minu{
+        position: relative;
+        width: 17%;
+        height:100%;
+    }
+
+    .items2{
+        position: absolute;
+        height: 20%;
+        width: 5%;
+        transition: all 1s;
+        transform: rotated(180deg);
+        opacity: 0;
+        margin-top: 35%;
+        margin-left: 103%;
+        font-size: 150%;
+        visibility: hidden;
+    }
+
+    .callme:hover+.minu>.items2{
+        top: 0;
+        transform: rotateZ(0deg);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .callme p:hover{
+        color: black;
+        background-color: white;
+        transform: translateY(-5px);
+    }
+
+    .article img{
+    animation: img 2s ease-in-out infinite;
+    animation-delay: 2s;
+    }
+
+    @keyframes slideBottom{
+        0%{
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideTop{
+        0%{
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    /*----------About--------------------------------*/
+    .zeyd{
+        width: 40%;
+        height: 65%;
+        margin-left: 5%;
+        border-radius: 10%;
+        border: 2px solid orange;
+        margin-top: 10%;
+        position: absolute;
+    }
+
+    h3{
+        margin-left: 50%;
+        margin-right: 12%;
+        font-size: 15px;
+        margin-top: 30%;
+        width: 48%;
+        border: 3px solid orange;
+        border-radius: none;
+        padding: 10px;
+        word-spacing: 5px;
+        color: gray;
+        background-color: black;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .about{
+        position: relative;
+        margin-top: 0%;
+    }
+
+    .about p{
+        position:absolute;
+        margin-top: 20%;
+        border: 2px solid orange;
+        border-radius: 10px;
+        box-shadow: 0px 0px 30px white;
+        color: orange;
+        background-color: black;
+        font-size: 40px;
+        margin-left: 50%;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .name{
+        font-size: 15px;
+        border: 1px solid orange;
+        border-radius: 10px;
+        color: orange;
+        background-color: black;
+        position: absolute;
+        padding: 5px;
+        margin-top: 43%;
+        margin-left: 12%;
+        z-index: 1;
+    }
+
+    .abt img{
+    animation: img 2s ease-in-out infinite;
+    animation-delay: 2s;
+    }
+    /*-------------Skills-------------------------*/
+    section{
+        position: relative;
+        margin-top: 40%;
+    }
+
+    .tsirt{
+        width: 18%;
+        height: 18%;
+        border: 2px solid orange;
+        border-radius: 50%;
+    }
+
+    .jersey{
+        width: 20%;
+        height: 20%;
+        border: 2px solid orange;
+        border-radius: 50%;
+    }
+
+    .frint{
+        width: 23%;
+        height: 23%; 
+        border: 2px solid orange;
+        border-radius: 50%;
+    }
+
+    .maintext{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: orange;
+        margin-top: 15%;
+        position: absolute;
+    }
+
+    .maintext h2{
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .sectionservices{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 30%;
+        display: inline-block;
+        margin-left: 30px;
+        margin-top: 23%;
+    }
+
+    .sectionservices h4{
+        border: 2px solid orange;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        padding: 3px;
+        width: 180px;
+        margin-left: 85px;
+    }
+
+    .sectionservices .servicebox{
+        flex: 1 1 18rem;
+        padding: 2rem 1rem 2rem;
+        text-align: center;
+        background:darkgrey;
+        color: black;
+        transition: transform .4s;
+        border-radius: 50px;
+    }
+
+    .bot{
+        width: auto;
+        justify-content: center;
+        border: 2px solid orange;
+        border-radius: 10px;
+        color:orange;
+        background-color:black;
+        padding: 5px;
+    }
+
+    .btnbox{
+        margin-top: 10px;
+    }
+
+    .btnbox :hover{
+        border: 2px solid black;
+        color: black;
+        background-color: white;
+        transition: all .5s;
+    }
+
+    .btnbox a{
+        text-decoration: none;
+    }
+
+    .servicebox img{
+    animation: img 2s ease-in-out infinite;
+    animation-delay: 2s;
+    }
+    /*----------Services--------------------------*/
+    .Services{
+        margin-top: 0%;
+        animation: slideBottom 2s ease forwards;
+        opacity: 0;
+    }
+
+    .poppo{
+        width: 26%;
+        height: 26%;
+        border: 2px solid orange;
+        border-radius: 50%;
+    }
+
+    .youtube{
+        width: 18%;
+        height: 18%;
+        border: 2px solid orange;
+        border-radius: 50%;
+    }
+
+    .tshirt-layout{
+        width: 26%;
+        height: 26%; 
+        border: 2px solid orange;
+        border-radius: 50%;
+    }
+
+    .main-text span{
+        font-size: 100%;
+        color: black;
+        padding-left: 20%;
+    }
+
+    .main-text{
+        padding-left: 42%;
+        color: orange;
+        position: absolute;
+        padding-top: 15%;
+    }
+
+    .main-text h2{
+        text-align: center;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .section-services h4{
+        border: 2px solid orange;
+        color: orange;
+        background-color: black;
+        border-radius: 10px;
+        padding: 3px;
+        width: 160px;
+        margin-left: 85px;
+    }
+
+    .section-services{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        display: inline-block;
+        margin-left: 30px;
+        margin-top: 23%; 
+        position: relative;
+    }
+
+    .section-services .service-box{
+        flex: 1 1 18rem;
+        padding: 2rem 1rem 2rem;
+        text-align: center;
+        background:white;
+        transition: transform .4s;
+        border-radius: 50px;
+    }
+
+    .btnn{
+        width: auto;
+        justify-content: center;
+        border: 2px solid orange;
+        border-radius: 10px;
+        color:black;
+        background-color:gray;
+        padding: 5px;
+        transition: .10s;
+    }
+
+    .btn-box{
+        margin-top: 10px;
+    }
+
+    .btn-box :hover{
+        border: 2px solid black;
+        background-color: orange;
+        color: white;
+    }
+
+    .btn-box a{
+        text-decoration: none;
+    }
+
+    .service-box img{
+    animation: img 2s ease-in-out infinite;
+    animation-delay: 2s;
+    }
+    /*-------Contact-----------------------------*/
+    #Contact{
+        margin-top: 2%;
+    }
+
+    .mentext{
+        text-align: center;
+        font-size: 20%;
+    }
+
+    .mentext h2{
+        color: orange;
+        font-size: 1000%;
+    }
+
+    .contant{
+        background: black;
+        width: 100%;
+    }
+
+    .contant form{
+        text-align: center;
+        max-width: 50rem;
+        margin: 1rem auto;
+    }
+
+    .contant form input,
+    .contant form textarea{
+        width: 100%;
+        color: black;
+        background: orange;
+        margin-bottom: .7rem;
+        border: none;
+        border-radius: 5px;
+        padding: .8rem;
+    }
+
+    .btnform .btt{
+        border: 2px solid orange;
+        border-radius: 5px;
+        color: black;
+        background-color: white;
+        padding: 5px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3%;
+        padding-top: 10px;
+    }
+
+    footer{
+        text-align: center;
+        color: orange;
+        font-size: 170%;
+        padding-bottom: 5px;
+    }
+    </style>
+
+</head>
+<body>
+    <header id="Header">
+        <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#" class="logo"><b>Z</b>EYD</a>
+        <nav class="navbar">
+            <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#home">Home</a>
+            <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#About">About</a>
+            <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#Skills">Skills</a>
+            <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#Services">Services</a>
+            <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#Contact">Contact</a>
+        </nav>
+    </header>
+    <article class="hidden">
+    <article class="article" id="home">
+        <h1>Hello I'm <span>DATU ZEYD USOP</span></h1>
+        <h><b>WEBSITE DEVELOPER</b></h>
+        <p>And I'm from Datu Piang Maguindanao</p>
+        <div class="HAIRME">
+            <p>HIRE ME</p>
+        </div>
+        <div class="menu">
+            <div class="items1">THANKYOU</div>
+        </div>
+        <div class="callme">
+            <p>CONTACT ME</p>
+        </div>
+        <div class="minu">
+            <div class="items2">09069024058</div>
+        </div>
+        <img src="./final portfolio_files/me.jpg" class="me">
+        <div class="name">DATU ZEYD BALAIMAN USOP</div>
+    </article>
+    </article>
+
+    <!--------about------->
+    <div class="about">
+        <div id="About"></div>
+        <p>About Me</p>
+        <h3>Hello everyone My Name is DATU ZEYD BALAIMAN USOP<br>
+            From DATU PIANG MAGUINDANAO DEL SUR I'm Study at the <br>
+        GANI L, ABPI COLLEGE INCORPORATED BSIT COURSE <br>My dreams for my life
+        i want to be successfull person inshaallah <br>i want my parents proud of me..................<br>
+        So i always don't want to waste the opportunity they give me<br>that i know will be good for me, i am very<br>
+        gratefull because even though life is very difficult,<br> they still do everything to study me.
+        </h3>
+    </div>
+    <div class="abt">
+    <img src="./final portfolio_files/photo.jpg" class="zeyd">
+</div>
+
+<!-----------Skill--------------------------------------------------->
+<section id="Skills" class="Skill">
+    <div class="maintext">
+        <h2>Our Skills</h2>
+    </div>
+
+    <div class="sectionservices">
+        <div class="servicebox">
+        <img src="./final portfolio_files/jerse.jpg" class="jersey">
+        <h4>JERSEY DESIGN</h4>
+            <p>Hello Sir how can i help you? Do you want to make a jersey design, I'm good at it. Just choose a design and messege me if interest.</p>
+            <div class="btnbox">
+                <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#" class="bot">See More</a>
+            </div>
+        </div>
+    </div>
+    <div class="sectionservices">
+    <div class="servicebox">
+        <img src="./final portfolio_files/PRINT.jpg" class="frint">
+            <h4>PRINTER</h4>
+        <p>Hello Ma'am/Sir I know how to print anything using a laptop. If you want to print anything, i will do it. Just messege me and I'll take care of it. </p>
+        <div class="btnbox">
+            <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#" class="bot">See More</a>
+        </div>
+    </div>
+</div>
+<div class="sectionservices">
+    <div class="servicebox">
+    <img src="./final portfolio_files/tshirt.jpg" class="tsirt">
+    <h4>TSHIRT DESIGN</h4>
+    <p>Hello Ma'am/Sir I just want to let you know that i am good at designing clothes or any fabric using a cellphone and laptop. Just messege me.</p>
+    <div class="btnbox">
+        <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#" class="bot">Read More</a>
+    </div>
+    </div>
+</div>
+</section>
+
+<!---------Service--------->
+<section id="Services" class="Services">
+    <div class="main-text">
+        <span>What i will do for you?</span>
+        <h2>Our Services</h2>
+    </div>
+
+    <div class="section-services">
+        <div class="service-box">
+        <img src="./final portfolio_files/poppo.jpg" class="poppo">
+        <h4>POPPO APP</h4>
+            <p>Apps where you can earn real money with your cellphone, easy to do just live and then there are more games.</p>
+            <div class="btn-box">
+                <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#" class="btnn">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-services">
+    <div class="service-box">
+        <img src="./final portfolio_files/youtube-player-icon-with-flat-design_23-2147837753.jpg" class="youtube">
+            <h4>YOUTUBE</h4>
+        <p>Youtube where you can watch tutorials, you want to watch like the ones you missed in your lessons, go to play store and download.</p>
+        <div class="btn-box">
+            <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#" class="btnn">Read More</a>
+        </div>
+    </div>
+</div>
+<div class="section-services">
+    <div class="service-box">
+    <img src="./final portfolio_files/tshirt.jpg" class="tshirt-layout">
+    <h4>TSHIRT LAYOUT</h4>
+    <p>Where you can do business in layout or designing clothes. that's how beautiful people know about layouting.</p>
+    <div class="btn-box">
+        <a href="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#" class="btnn">Read More</a>
+    </div>
+    </div>
+</div>
+</section>
+<!-------------------------Contact------------------------------------->
+
+<section id="Contact" class="contant">
+    <div class="mentext">
+        <span>Ask me question</span>
+        <h2>Contact Me</h2>
+    </div>
+    <form action="file:///C:/Users/nisha/Downloads/Portfolio%20ko.html#">
+        <input type="text" placeholder="Your Name">
+         <input type="text" placeholder="Your Email">
+          <input type="text" placeholder="Your Address">
+          <input type="number" placeholder="Phone Number">
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <div class="btnform">
+            <button type="submit" class="btt">Send Message</button>
+          </div>
+    </form>
+</section>
+<footer>HELLO LORD GOOD BYE</footer>
+
+</body></html>
